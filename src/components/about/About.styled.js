@@ -4,6 +4,12 @@ export const StyledAbout = styled.div`
   display: grid;
   grid-template-columns: 35% 50%;
   gap: 15%;
+
+  @media (max-width: ${({ theme }) => theme.devices.tablet}) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
 `;
 
 export const AboutMe = styled.div`
@@ -18,6 +24,16 @@ export const AboutMe = styled.div`
   );
   display: grid;
   place-items: center;
+
+  @media (max-width: ${({ theme }) => theme.devices.tablet}) {
+    width: 50%;
+    margin: 2rem auto 4rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.devices.mobile}) {
+    width: 65%;
+    margin: 0 auto 3rem;
+  }
 `;
 
 export const AboutMeImg = styled.div`
@@ -34,6 +50,18 @@ export const AboutContent = styled.div`
   p {
     margin: 2rem 0 2.6rem;
     color: ${({ theme }) => theme.colors.light};
+
+    @media (max-width: ${({ theme }) => theme.devices.tablet}) {
+      margin: 1rem 0 1.5rem;
+    }
+    
+    @media (max-width: ${({ theme }) => theme.devices.mobile}) {
+    margin: 1.5rem 0;
+  }
+  }
+
+  @media (max-width: ${({ theme }) => theme.devices.mobile}) {
+    text-align: center;
   }
 `;
 
@@ -41,6 +69,11 @@ export const AboutCardList = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+
+  @media (max-width: ${({ theme }) => theme.devices.mobile}) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
 `;
 
 export const AboutCard = styled.div`

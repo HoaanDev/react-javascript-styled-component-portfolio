@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  height: 100vh;
   margin-top: 8rem;
 
   @media (max-width: ${({ theme }) => theme.devices.tablet}) {
