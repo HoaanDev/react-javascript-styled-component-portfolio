@@ -43,14 +43,18 @@ export const ContactOption = styled.article`
 `;
 
 export const ContactIcon = styled.i`
-  font-size: 1.6rem;
-  margin-bottom: 0%.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+
+  label {
+    font-size: 1.2rem;
+  }
 
   input,
   textarea {

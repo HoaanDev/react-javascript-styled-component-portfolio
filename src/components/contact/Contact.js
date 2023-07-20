@@ -1,3 +1,6 @@
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 import { Section } from "../../styles/Section";
 import {Button } from "../../styles/Button";
 import { AiOutlineMail } from "react-icons/ai";
@@ -37,15 +40,29 @@ const options = [
 ];
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_yqrn7xk', 'template_d55dugi', form.current, 'pHtQy7PM2hPUexlUA')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  };
+
   return (
     <Section id="contact">
       <h5>Get In Touch</h5>
-      <h2>Contact Me</h2>
+      <h2>CONTACT ME</h2>
 
       <StyledContact>
         <ContactOptions>
           {options.map((option) => (
-            <ContactOption>
+            <ContactOption key={option.id}>
               <ContactIcon>{option.icon}</ContactIcon>
               <h4>{option.type}</h4>
               <h5>{option.describe}</h5>
@@ -53,7 +70,8 @@ export default function Contact() {
             </ContactOption>
           ))}
         </ContactOptions>
-        <ContactForm>
+        <ContactForm ref={form} onSubmit={sendEmail}>
+          <label>Send Me Email</label>
           <input type="text" name="name" placeholder="Your Full Name" required/>
           <input type="email" name="email" placeholder="Your Email" required/>
           <textarea name="message" rows="7" placeholder="Your Message" required></textarea>

@@ -76,7 +76,7 @@ export default function Skill() {
   return (
     <Section id="skill">
       <h5>What Skills I Have</h5>
-      <h2>My Skill</h2>
+      <h2>MY SKILLS</h2>
 
       <StyledSkill>
         <FrontendSkill>

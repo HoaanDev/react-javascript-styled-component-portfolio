@@ -1,4 +1,5 @@
 import HeaderSocials from "./HeaderSocials/HeaderSocials";
+import Typewriter from "typewriter-effect";
 
 import {
   StyledHeader,
@@ -17,8 +18,23 @@ export default function Header() {
     <StyledHeader>
       <HeaderContainer>
         <h5>Hello I'm</h5>
-        <Name>Hoan Nguyen</Name>
-        <Career $textlight>Fullstack Developer</Career>
+        <Name>
+          <Typewriter
+            options={{
+              autoStart: true,
+              loop: true,
+            }}
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Hoaan Nguyen.")
+                .pauseFor(1000)
+                .deleteAll()
+                .typeString("Fullstack Web Developer.")
+                .pauseFor(1000)
+                .start();
+            }}
+          />
+        </Name>
         <CTA />
         <HeaderSocials />
 

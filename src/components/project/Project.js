@@ -63,7 +63,7 @@ export default function Project() {
   return (
     <Section id="project">
       <h5>My Recent Projects</h5>
-      <h2>Projects</h2>
+      <h2>MY PROJECTS</h2>
       <StyledProject>
         {projects.map((project) => (
           <ProjectCard key={project.id}>

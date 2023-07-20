@@ -18,11 +18,11 @@ export default function About() {
   return (
     <Section id="about">
       <h5>Get To Know</h5>
-      <h2>About Me</h2>
+      <h2>ABOUT ME</h2>
       <StyledAbout>
         <AboutMe>
           <AboutMeImg>
-            <img src={ME} alt="About Me Image" />
+            <img src={ME} alt="About Me" />
           </AboutMeImg>
         </AboutMe>
         <AboutContent>

@@ -18,8 +18,8 @@ export const StyledNavbar = styled.nav`
 export const NavButton = styled.a`
   font-size: 1.1rem;
   padding: 0.9rem;
-  color: ${({ theme, active }) => active === "true" ? theme.colors.white : theme.colors.light};
-  background: ${({ theme, active }) => active === "true" ? theme.colors.bg : "transparent"};;
+  color: ${({ theme, active }) => active === "true" ? theme.colors.bg : theme.colors.light};
+  background: ${({ theme, active }) => active === "true" ? theme.colors.primary : "transparent"};;
   border-radius: 50%;
   display: flex;
   &:hover {

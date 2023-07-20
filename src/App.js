@@ -22,8 +22,8 @@ function App() {
         <Skill />
         <Project />
         <Contact />
-        <Footer />
       </Container>
+        <Footer />
     </ThemeProvider>
   );
 }
